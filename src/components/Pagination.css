@@ -1,0 +1,46 @@
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; /* Allows buttons to wrap on smaller screens */
+  gap: 10px; /* Spacing between buttons */
+  margin: 20px 0;
+}
+
+button {
+  padding: 10px 15px;
+  margin: 5px; /* Adds consistent spacing */
+  border: none;
+  border-radius: 5px;
+  background-color: #4CAF50;
+  color: #ffffff;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button.active {
+  background-color: #388e3c;
+}
+
+button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+  background-color: #45a049;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  button {
+    font-size: 0.8rem; /* Smaller font for smaller screens */
+    padding: 8px 12px;
+  }
+
+  .pagination-container {
+    gap: 5px; /* Reduce gap on smaller screens */
+  }
+}
